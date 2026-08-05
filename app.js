@@ -11,6 +11,7 @@ import {
 const STORAGE_KEY = 'grandma-test-practice-v1';
 const views = ['learn', 'practice', 'plan'];
 let currentConceptId = null;
+let persistenceAvailable = true;
 
 function validProgrammeStart(value) {
   if (typeof value !== 'string') return null;
@@ -23,11 +24,19 @@ function validProgrammeStart(value) {
 }
 
 function loadState() {
+  let stored;
   try {
-    const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    stored = localStorage.getItem(STORAGE_KEY) || '{}';
+  } catch {
+    persistenceAvailable = false;
+    return { progress: normaliseProgress({}), programmeStart: null };
+  }
+
+  try {
+    const parsed = JSON.parse(stored);
     return {
-      progress: normaliseProgress(stored.progress),
-      programmeStart: validProgrammeStart(stored.programmeStart),
+      progress: normaliseProgress(parsed.progress),
+      programmeStart: validProgrammeStart(parsed.programmeStart),
     };
   } catch {
     return { progress: normaliseProgress({}), programmeStart: null };
@@ -37,7 +46,14 @@ function loadState() {
 let state = loadState();
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    persistenceAvailable = true;
+    return true;
+  } catch {
+    persistenceAvailable = false;
+    return false;
+  }
 }
 
 function localIsoDay() {
@@ -73,6 +89,10 @@ function renderMastery() {
   document.getElementById('masteryBar').style.width = `${percentage}%`;
   document.getElementById('masteryBar').textContent = `${summary.mastered}/${summary.total}`;
   document.getElementById('masteryText').textContent = `${summary.mastered}/7 can teach · ${summary.attempts} practice attempt${summary.attempts === 1 ? '' : 's'}`;
+}
+
+function renderPersistenceNotice() {
+  document.getElementById('persistenceNotice').hidden = persistenceAvailable;
 }
 
 function setPracticeConcept(conceptId) {
@@ -130,6 +150,7 @@ function renderSchedule() {
 
 function renderAll() {
   renderMastery();
+  renderPersistenceNotice();
   renderProgressList();
   renderSchedule();
 }
@@ -212,12 +233,18 @@ document.getElementById('saveProgramme').addEventListener('click', () => {
   if (!start) return;
   state.programmeStart = start;
   saveState();
+  renderPersistenceNotice();
   renderSchedule();
 });
 
 document.getElementById('resetProgress').addEventListener('click', () => {
   if (!confirm('Reset all practice ratings, attempts and the programme start date?')) return;
-  localStorage.removeItem(STORAGE_KEY);
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+    persistenceAvailable = true;
+  } catch {
+    persistenceAvailable = false;
+  }
   state = { progress: normaliseProgress({}), programmeStart: null };
   document.getElementById('programmeStart').value = localIsoDay();
   setPracticeConcept(chooseNextConcept(state.progress).id);

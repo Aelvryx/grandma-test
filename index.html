@@ -44,6 +44,7 @@ p { margin-bottom:1rem; }
 .mastery-copy small { color:var(--muted); font-family:'DM Sans',sans-serif; }
 .mastery-progress { width:120px; height:10px; background:var(--surface2); border-radius:999px; overflow:hidden; }
 .mastery-progress span { display:block; min-width:0; height:100%; background:var(--green); color:transparent; }
+.persistence-notice { color:var(--accent); font-family:'DM Sans',sans-serif; font-size:0.8rem; margin:-1rem 0 2rem; }
 button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
 [hidden] { display:none !important; }
 .primary, .secondary, .rating-button { border-radius:5px; padding:0.65rem 1rem; font-family:'DM Sans',sans-serif; font-weight:700; cursor:pointer; }
@@ -108,6 +109,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 <div class="mastery-progress" aria-hidden="true"><span id="masteryBar" style="width:0%">0/7</span></div>
 <button type="button" class="primary" id="startPractice">Practice now</button>
 </div>
+<p class="persistence-notice" id="persistenceNotice" role="status" hidden>Browser storage is unavailable. Practice will still work, but changes last only for this tab.</p>
 
 <main id="learn-view" class="view" role="tabpanel">
 
