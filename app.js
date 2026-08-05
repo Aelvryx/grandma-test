@@ -95,12 +95,18 @@ function renderPersistenceNotice() {
   document.getElementById('persistenceNotice').hidden = persistenceAvailable;
 }
 
+function renderPracticeMeta() {
+  if (!currentConceptId) return;
+  const concept = CONCEPTS.find(item => item.id === currentConceptId);
+  const entry = state.progress[currentConceptId];
+  document.getElementById('practiceMeta').textContent = `Concept ${concept.number} of 7 · ${RATING_LABELS[entry.rating]}`;
+}
+
 function setPracticeConcept(conceptId) {
   const concept = CONCEPTS.find(item => item.id === conceptId) ?? chooseNextConcept(state.progress);
   currentConceptId = concept.id;
-  const entry = state.progress[concept.id];
 
-  document.getElementById('practiceMeta').textContent = `Concept ${concept.number} of 7 · ${RATING_LABELS[entry.rating]}`;
+  renderPracticeMeta();
   document.getElementById('practiceTitle').textContent = concept.title;
   document.getElementById('practicePrompt').textContent = concept.prompt;
   document.getElementById('practiceCriteria').innerHTML = concept.criteria
@@ -151,6 +157,7 @@ function renderSchedule() {
 function renderAll() {
   renderMastery();
   renderPersistenceNotice();
+  renderPracticeMeta();
   renderProgressList();
   renderSchedule();
 }
