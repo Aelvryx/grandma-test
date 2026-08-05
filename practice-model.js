@@ -112,9 +112,13 @@ export function normaliseProgress(raw) {
     const rating = Object.hasOwn(RATING_ORDER, entry.rating)
       ? entry.rating
       : 'unseen';
+    const parsedAttempts = Math.floor(Number(entry.attempts) || 0);
+    const attempts = Number.isSafeInteger(parsedAttempts) && parsedAttempts >= 0
+      ? parsedAttempts
+      : 0;
     return [concept.id, {
       rating,
-      attempts: Math.max(0, Math.floor(Number(entry.attempts) || 0)),
+      attempts,
       lastPractised: validDate(entry.lastPractised) ? entry.lastPractised : null,
     }];
   }));

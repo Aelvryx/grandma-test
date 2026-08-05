@@ -26,6 +26,9 @@ test('invalid stored state becomes a complete safe progress record', () => {
   const progress = normaliseProgress({
     c1: { rating: 'nonsense', attempts: -4, lastPractised: 'not-a-date' },
     c2: { rating: 'nearly', attempts: 2.9, lastPractised: '2026-08-06T00:00:00.000Z' },
+    c3: { attempts: 'Infinity' },
+    c4: { attempts: 1e309 },
+    c5: { attempts: Number.MAX_SAFE_INTEGER + 1 },
   });
 
   assert.deepEqual(progress.c1, { rating: 'unseen', attempts: 0, lastPractised: null });
@@ -34,6 +37,9 @@ test('invalid stored state becomes a complete safe progress record', () => {
     attempts: 2,
     lastPractised: '2026-08-06T00:00:00.000Z',
   });
+  assert.equal(progress.c3.attempts, 0);
+  assert.equal(progress.c4.attempts, 0);
+  assert.equal(progress.c5.attempts, 0);
   assert.equal(Object.keys(progress).length, 7);
 });
 
