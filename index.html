@@ -15,7 +15,6 @@ h2 { font-family:'DM Sans',sans-serif; font-size:1.25rem; color:var(--accent); m
 h3 { font-family:'DM Sans',sans-serif; font-size:1rem; color:var(--muted); margin:1.5rem 0 0.5rem; text-transform:uppercase; letter-spacing:0.05em; font-weight:600; }
 p { margin-bottom:1rem; }
 .example { background:var(--surface); border-left:3px solid var(--accent); padding:1rem 1.25rem; margin:1.5rem 0; border-radius:0 6px 6px 0; font-style:italic; }
-.key { background:var(--surface2); border:1px solid var(--border); padding:0.25rem 0.5rem; border-radius:3px; font-family:'DM Sans',sans-serif; font-size:0.85rem; color:var(--accent); }
 .summary { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:1.5rem; margin:2rem 0; }
 .summary p:last-child { margin-bottom:0; }
 .concept-card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:1.5rem; margin-bottom:1rem; cursor:pointer; transition:border-color 0.2s; }
@@ -32,7 +31,10 @@ p { margin-bottom:1rem; }
 .toc li { margin-bottom:0.3rem; }
 .toc a { color:var(--accent); text-decoration:none; }
 .toc a:hover { text-decoration:underline; }
+.progress-wrap { background:var(--surface2); border-radius:20px; height:24px; overflow:hidden; margin:1rem 0; }
+.progress-bar { background:linear-gradient(90deg,var(--green),var(--accent)); height:100%; border-radius:20px; display:flex; align-items:center; justify-content:flex-end; padding-right:10px; color:var(--bg); font-weight:700; font-size:0.75rem; }
 .disclaimer { color:var(--muted); font-family:'DM Sans',sans-serif; font-size:0.75rem; margin-top:3rem; padding-top:1rem; border-top:1px solid var(--border); }
+@media(max-width:600px){ body{padding:1rem 0.5rem} }
 </style>
 </head>
 <body>
@@ -41,76 +43,138 @@ p { margin-bottom:1rem; }
 <p class="subtitle">Marxist theory explained plainly enough that someone with zero context can understand it. If you can't explain it simply, you don't understand it yet.</p>
 
 <div class="toc">
-<h2>Concepts</h2>
+<h2>The 7-Concept Curriculum</h2>
+<div class="progress-wrap"><div class="progress-bar" style="width:100%">7/7 drafted</div></div>
 <ol>
-<li><a href="#surplus">Surplus Value</a> — where profit comes from</li>
-<li><a href="#dialectics">Dialectical Materialism</a> — how change actually works</li>
-<li><a href="#commodity">Commodity Fetishism</a> — <em>coming soon</em></li>
-<li><a href="#base">Base and Superstructure</a> — <em>coming soon</em></li>
-<li><a href="#imperialism">Imperialism</a> — <em>coming soon</em></li>
-<li><a href="#primitive">Primitive Accumulation</a> — <em>coming soon</em></li>
-<li><a href="#lvt">Labour Theory of Value</a> — <em>coming soon</em></li>
+<li><a href="#c1">Surplus Value</a> — where profit comes from</li>
+<li><a href="#c2">Dialectical Materialism</a> — how change actually works</li>
+<li><a href="#c3">Commodity Fetishism</a> — why price hides labour</li>
+<li><a href="#c4">Base and Superstructure</a> — why reform isn't enough</li>
+<li><a href="#c5">Primitive Accumulation</a> — the first capital was stolen</li>
+<li><a href="#c6">Labour Theory of Value</a> — what things are really worth</li>
+<li><a href="#c7">Imperialism</a> — why capitalism must expand</li>
 </ol>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--muted);margin-top:0.5rem">One concept per two weeks. 14-week programme. Source texts listed in each concept.</p>
 </div>
 
-<div class="concept-card open" id="surplus">
+<div class="concept-card open" id="c1">
 <div class="meta">Concept 1 · The foundation</div>
 <h2>Surplus Value</h2>
 <div class="concept-body">
-
 <p>Imagine you work in a bakery. In one hour, you turn £10 worth of flour, yeast, and electricity into £30 worth of bread.</p>
-
 <p>The £20 of extra value — that came from your labour. You made something worth more than the ingredients.</p>
-
 <p>Now, your boss pays you £15 an hour. You created £20 of new value but only got £15 back. Where did the other £5 go?</p>
-
 <div class="example">That £5 is surplus value. It's the gap between what your labour produced and what you were paid for it.</div>
-
-<p>The boss keeps it. That's where profit comes from — not from the ingredients (those were already priced in), not from the oven (that's a tool), but from the difference between what you made and what you were paid.</p>
-
-<p>Here's the uncomfortable part: this isn't about a bad boss. A <em>good</em> boss, a fair boss, a boss who gives you a Christmas bonus — the structure is the same. If you got back everything your labour produced, there'd be nothing left for the business. Profit requires that gap.</p>
-
-<p>Marx's question was: is that fair? You made the bread. The value came from your hands and your time. Why does someone who owns the oven and the flour get to keep part of what you created?</p>
-
-<h3>The Answer</h3>
-<p>Because they own the means of production and you don't. You sell your time because you have to — you can't eat without a wage. They buy your time because it's worth more than they pay for it. The arrangement benefits one side more than the other, and it's not a coincidence which side is which.</p>
-
-<div class="summary">
-<p><strong>In one sentence:</strong> Surplus value is the difference between what workers produce and what they're paid, and it's the source of capitalist profit.</p>
-</div>
-
+<p>The boss keeps it. That's where profit comes from — not from the ingredients, not from the oven, but from the difference between what you made and what you were paid.</p>
+<p>This isn't about a bad boss. A <em>good</em> boss, a fair boss — the structure is the same. If you got back everything your labour produced, there'd be nothing left for the business. Profit requires that gap.</p>
+<p>Marx's question: is that fair? You made the bread. The value came from your hands. Why does someone who owns the oven get to keep part of what you created? Because they own the means of production and you don't.</p>
+<h3>In one sentence</h3>
+<div class="summary"><p>Surplus value is the difference between what workers produce and what they're paid, and it's the source of capitalist profit.</p></div>
+<h3>Source text</h3>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Capital Vol 1, Chapter 7-9. Wage Labour and Capital.</p>
 </div>
 </div>
 
-<div class="concept-card" id="dialectics">
+<div class="concept-card" id="c2">
 <div class="meta">Concept 2 · How change works</div>
 <h2>Dialectical Materialism</h2>
 <div class="toggle">Click to expand ↓</div>
 <div class="concept-body">
-
-<p>You know how people argue about whether it's "human nature" that causes poverty, or "bad policies," or "greedy corporations"?</p>
-
-<p>Marx said: stop looking for one single cause. Reality doesn't work like that.</p>
-
-<p>Everything that exists — the economy, the government, the culture, the technology, the way people think — is connected to everything else, and it's all in constant motion. Nothing stays still. Nothing is permanent. Everything is becoming something else.</p>
-
-<div class="example">That's the "dialectical" part: reality is a process, not a snapshot. Things change because they contain contradictions — opposing forces pulling in different directions. Capitalism creates enormous wealth AND enormous poverty. Those aren't accidents; they're connected, and the tension between them drives the system forward.</div>
-
+<p>Everything that exists — the economy, the government, the culture, the technology — is connected to everything else, and it's all in constant motion. Nothing stays still. Nothing is permanent.</p>
+<div class="example">That's the "dialectical" part: reality is a process, not a snapshot. Things change because they contain contradictions — opposing forces pulling in different directions. Capitalism creates enormous wealth AND enormous poverty. Those aren't accidents; they're connected, and the tension drives the system forward.</div>
 <h3>The Materialism Part</h3>
-<p>Before you think about ideas, culture, religion, or politics, look at how people are actually surviving. How are they getting food, shelter, warmth? Who owns the tools and land? Who works? Who takes the surplus?</p>
-
-<p>The material conditions — the real, physical setup of how people produce what they need — come first. The ideas, laws, religions, and political systems grow on top of that. Change the foundation and the building has to change too.</p>
-
-<p>But it's not a one-way street. Material conditions shape ideas, but ideas can feed back and change the material conditions. A political ideology can unite workers, who then change the material setup by seizing the means of production. It's a loop, not a line.</p>
-
-<div class="summary">
-<p><strong>In one sentence:</strong> Reality is made of interconnected, constantly-changing processes driven by internal contradictions, and the most fundamental driver is how people produce what they need to survive.</p>
-</div>
-
+<p>Before you think about ideas, culture, or politics, look at how people are actually surviving. How are they getting food and shelter? Who owns the tools and land? Who works? Who takes the surplus?</p>
+<p>The material conditions come first. The ideas, laws, and politics grow on top of that. Change the foundation and the building has to change too. But it's a loop — ideas can feed back and change the material conditions.</p>
+<div class="summary"><p><strong>In one sentence:</strong> Reality is made of interconnected, constantly-changing processes driven by internal contradictions, and the most fundamental driver is how people produce what they need to survive.</p></div>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Source: Anti-Dühring. Socialism: Utopian and Scientific. Theses on Feuerbach.</p>
 </div>
 </div>
 
-<p class="disclaimer">Part of the Marxist mastery goal. Drafts for review — not academic claims, just plain explanations. If you can't explain it to your grandmother, you don't understand it yet.</p>
+<div class="concept-card" id="c3">
+<div class="meta">Concept 3 · What price hides</div>
+<h2>Commodity Fetishism</h2>
+<div class="toggle">Click to expand ↓</div>
+<div class="concept-body">
+<p>You're in a shop. There's a Rolex for £10,000. There's a handmade wooden chair for £40. Nobody has to tell you which is "worth more."</p>
+<p>But where does that sense of value come from? You didn't watch either thing being made. You just see two objects with two numbers.</p>
+<p>When you buy something, you see a relationship between <em>things</em>. But hidden behind those numbers is a relationship between <em>people</em>. The miner, the assembler, the carpenter. Their labour created the value. But the commodity hides it, like a fossil hides the creature.</p>
+<div class="example">The commodity seems to have value "in itself." We talk about "the market" setting prices as if it were a weather system rather than decisions made by humans about other humans' labour.</div>
+<p>If you can't see the labour behind the price, you can't see the exploitation behind the profit. The fetishism makes exploitation invisible.</p>
+<div class="summary"><p><strong>In one sentence:</strong> Commodities hide the human labour that created them behind a price tag, making exploitation invisible and making economic relationships look like relationships between things rather than between people.</p></div>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Source: Capital Vol 1, Chapter 1.</p>
+</div>
+</div>
+
+<div class="concept-card" id="c4">
+<div class="meta">Concept 4 · Why reform isn't enough</div>
+<h2>Base and Superstructure</h2>
+<div class="toggle">Click to expand ↓</div>
+<div class="concept-body">
+<p>Imagine a block of flats. The top floors — nice views, decor, furniture — that's what you see. The foundations — concrete, plumbing, wiring — that's what holds it up.</p>
+<p>The tenants keep rearranging furniture, repainting walls. Frustrated that nothing changes. The building still creaks, the plumbing still leaks.</p>
+<p>That's political reform without economic change.</p>
+<h3>The Base</h3>
+<p>How people produce what they need. Who owns the factories, land, servers, supermarkets. Who works for whom. This is the foundation — not glamorous, but everything sits on it.</p>
+<h3>The Superstructure</h3>
+<p>Laws, politics, religion, education, media, culture. Real, important, fought over — but shaped by what's underneath.</p>
+<div class="example">Change the copyright law? The same conglomerates still own the content. Elect a progressive government? They still need capital's cooperation. Reform the police? They still protect the same property relations.</div>
+<p>But it's dialectical: the superstructure can push back on the base. A workers' movement can use political power to change ownership. The relationship goes both ways.</p>
+<div class="summary"><p><strong>In one sentence:</strong> The way a society produces what it needs (base) shapes its laws, politics, and culture (superstructure), so genuine change requires changing the foundation, not just redecorating.</p></div>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Source: Preface to A Contribution to the Critique of Political Economy.</p>
+</div>
+</div>
+
+<div class="concept-card" id="c5">
+<div class="meta">Concept 5 · The origin story they don't tell</div>
+<h2>Primitive Accumulation</h2>
+<div class="toggle">Click to expand ↓</div>
+<div class="concept-body">
+<p>Every capitalist will tell you their fortune came from hard work and smart decisions. But where did the <em>first</em> capital come from? Before there were markets, before anyone could "save up" — how did some people end up owning everything?</p>
+<p>The answer isn't pretty. It wasn't saving. It was taking.</p>
+<h3>The Enclosures</h3>
+<p>For centuries, ordinary people had common land — to graze animals, gather wood, grow food. Between the 15th and 19th centuries, the gentry used law and violence to fence it off. People who fed themselves became trespassers. Work in the factories or starve. That's how the working class was created.</p>
+<h3>Colonialism and Slavery</h3>
+<p>The gold, cotton, sugar that funded the industrial revolution didn't come from savings. They came from conquered land, worked by enslaved people, extracted by military force. The capital that built the factories was stolen.</p>
+<div class="example">Same pattern today: land grabs in Africa, privatisation of water, patenting of seeds farmers have grown for millennia. Turn shared resources into private property, then charge for access.</div>
+<p>When someone says "I built this from nothing," primitive accumulation is the silent nothing they're standing on.</p>
+<div class="summary"><p><strong>In one sentence:</strong> The original capital wasn't saved or earned — it was taken by force through land enclosure, colonialism, and slavery, and that pattern continues today.</p></div>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Source: Capital Vol 1, Part VIII (Chapters 26-33).</p>
+</div>
+</div>
+
+<div class="concept-card" id="c6">
+<div class="meta">Concept 6 · What things are really worth</div>
+<h2>The Labour Theory of Value</h2>
+<div class="toggle">Click to expand ↓</div>
+<div class="concept-body">
+<p>Why does a Ferrari cost more than a bicycle? Most people say supply and demand. That explains the wobble — but not the baseline. Nobody would pay £200,000 for a bicycle, no matter how rare.</p>
+<p>Marx's answer: labour. Everything contains human labour. A Ferrari contains thousands of hours of engineering. A bicycle contains a few hours of welding. That's the fundamental difference.</p>
+<h3>Socially Necessary Labour Time</h3>
+<p>Not just any labour — the <em>average</em> time given current technology. Spend 100 hours hand-carving a chair a factory makes in 2 hours? Your chair isn't worth 50× more. The market doesn't reward inefficiency.</p>
+<div class="example">Prices fluctuate with supply and demand, but they orbit around the labour embodied in a product. Supply and demand explain the wobble. Labour explains the gravity.</div>
+<p>Connects to surplus value: if labour creates value and workers are paid less than they create, the gap is profit. The labour theory of value is the foundation for understanding where profit comes from.</p>
+<div class="summary"><p><strong>In one sentence:</strong> The baseline value of anything is determined by the socially necessary human labour embodied in it, and prices are pulled toward that labour time by competition.</p></div>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Source: Capital Vol 1, Chapter 1. Wage Labour and Capital.</p>
+</div>
+</div>
+
+<div class="concept-card" id="c7">
+<div class="meta">Concept 7 · Why the system can't stay home</div>
+<h2>Imperialism</h2>
+<div class="toggle">Click to expand ↓</div>
+<div class="concept-body">
+<p>The countries that industrialised first — Britain, France — are now among the richest. The countries they colonised — India, Congo, Nigeria — are among the poorest. Coincidence?</p>
+<p>Lenin's argument: capitalism can't stay at home. It produces more than the domestic market can absorb (surplus value problem). So it must find new markets and cheaper labour. Not as an option — as survival.</p>
+<h3>Lenin's Five Features</h3>
+<p>1. Monopolies replace competition<br>2. Bank and industrial capital merge<br>3. Capital is exported (not just goods)<br>4. International monopolies form<br>5. The world is divided between great powers</p>
+<div class="example">Replace "colonies" with "developing markets" and "territorial division" with "trade agreements and debt" — it's the same machine, still running.</div>
+<p>The system moves wealth from periphery to centre. Multinationals extract resources cheaply, sell manufactured goods expensively. Loans force privatisation. Trade agreements protect IP but not labour. Designed to move wealth upward and outward.</p>
+<div class="summary"><p><strong>In one sentence:</strong> Imperialism is a structural necessity of capitalism — it must constantly expand into new markets and cheaper labour to survive, systematically transferring wealth from the periphery to the centre.</p></div>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Source: Lenin, Imperialism: The Highest Stage of Capitalism (1916).</p>
+</div>
+</div>
+
+<p class="disclaimer">Part of the Marxist mastery goal — plain-language explanations for review. Not academic claims, just an attempt at clarity. If you can't explain it to your grandmother, you don't understand it yet. Drafts open for revision based on Anthony's feedback.</p>
 
 <script>
 document.querySelectorAll('.concept-card').forEach(card => {
