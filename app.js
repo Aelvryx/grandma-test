@@ -77,6 +77,7 @@ function setView(name) {
     const active = button.dataset.view === name;
     button.classList.toggle('active', active);
     button.setAttribute('aria-selected', String(active));
+    button.tabIndex = active ? 0 : -1;
   });
   document.querySelectorAll('.view').forEach(view => {
     view.hidden = view.id !== `${name}-view`;
@@ -162,8 +163,25 @@ function renderAll() {
   renderSchedule();
 }
 
-document.querySelectorAll('.view-tab').forEach(button => {
+const viewTabs = [...document.querySelectorAll('.view-tab')];
+viewTabs.forEach(button => {
   button.addEventListener('click', () => setView(button.dataset.view));
+  button.addEventListener('keydown', event => {
+    const currentIndex = viewTabs.indexOf(button);
+    const destinations = {
+      ArrowRight: (currentIndex + 1) % viewTabs.length,
+      ArrowDown: (currentIndex + 1) % viewTabs.length,
+      ArrowLeft: (currentIndex - 1 + viewTabs.length) % viewTabs.length,
+      ArrowUp: (currentIndex - 1 + viewTabs.length) % viewTabs.length,
+      Home: 0,
+      End: viewTabs.length - 1,
+    };
+    if (!Object.hasOwn(destinations, event.key)) return;
+    event.preventDefault();
+    const destination = viewTabs[destinations[event.key]];
+    setView(destination.dataset.view);
+    destination.focus();
+  });
 });
 
 document.querySelectorAll('.lesson-toggle').forEach(button => {

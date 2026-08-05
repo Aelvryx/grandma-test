@@ -99,9 +99,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 <p class="subtitle">Marxist theory explained plainly enough that someone with zero context can understand it. If you can't explain it simply, you don't understand it yet.</p>
 
 <nav class="view-tabs" role="tablist" aria-label="Grandma Test sections">
-<button type="button" class="view-tab active" data-view="learn" role="tab" aria-selected="true">Learn</button>
-<button type="button" class="view-tab" data-view="practice" role="tab" aria-selected="false">Practice</button>
-<button type="button" class="view-tab" data-view="plan" role="tab" aria-selected="false">14-week plan</button>
+<button type="button" class="view-tab active" id="learn-tab" data-view="learn" role="tab" aria-selected="true" aria-controls="learn-view" tabindex="0">Learn</button>
+<button type="button" class="view-tab" id="practice-tab" data-view="practice" role="tab" aria-selected="false" aria-controls="practice-view" tabindex="-1">Practice</button>
+<button type="button" class="view-tab" id="plan-tab" data-view="plan" role="tab" aria-selected="false" aria-controls="plan-view" tabindex="-1">14-week plan</button>
 </nav>
 
 <div class="mastery-panel">
@@ -111,7 +111,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 </div>
 <p class="persistence-notice" id="persistenceNotice" role="status" hidden>Browser storage is unavailable. Practice will still work, but changes last only for this tab.</p>
 
-<main id="learn-view" class="view" role="tabpanel">
+<main id="learn-view" class="view" role="tabpanel" aria-labelledby="learn-tab">
 
 <div class="toc">
 <h2>The 7-Concept Curriculum</h2>
@@ -240,7 +240,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 </article>
 </main>
 
-<section id="practice-view" class="view" role="tabpanel" hidden>
+<section id="practice-view" class="view" role="tabpanel" aria-labelledby="practice-tab" hidden>
 <h2>Practice out loud</h2>
 <p class="practice-intro">Read the prompt, look away from the lesson, and teach it as if the listener has no context. Reveal the benchmark only after you have committed to an answer.</p>
 
@@ -277,7 +277,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 </div>
 </section>
 
-<section id="plan-view" class="view" role="tabpanel" hidden>
+<section id="plan-view" class="view" role="tabpanel" aria-labelledby="plan-tab" hidden>
 <h2>14-week programme</h2>
 <p class="plan-intro">One concept every two weeks: read the source, study the plain explanation, practise aloud, then earn “Can teach” without looking. The dates create accountability; they do not mark a lesson complete for you.</p>
 
