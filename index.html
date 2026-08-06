@@ -101,12 +101,12 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 <nav class="view-tabs" role="tablist" aria-label="Grandma Test sections">
 <button type="button" class="view-tab active" id="learn-tab" data-view="learn" role="tab" aria-selected="true" aria-controls="learn-view" tabindex="0">Learn</button>
 <button type="button" class="view-tab" id="practice-tab" data-view="practice" role="tab" aria-selected="false" aria-controls="practice-view" tabindex="-1">Practice</button>
-<button type="button" class="view-tab" id="plan-tab" data-view="plan" role="tab" aria-selected="false" aria-controls="plan-view" tabindex="-1">14-week plan</button>
+<button type="button" class="view-tab" id="plan-tab" data-view="plan" role="tab" aria-selected="false" aria-controls="plan-view" tabindex="-1">16-week plan</button>
 </nav>
 
 <div class="mastery-panel">
-<div class="mastery-copy"><strong id="masteryText">0/7 can teach · 0 practice attempts</strong><small>Seven lessons are published. Mastery is what you can explain without looking.</small></div>
-<div class="mastery-progress" aria-hidden="true"><span id="masteryBar" style="width:0%">0/7</span></div>
+<div class="mastery-copy"><strong id="masteryText">0/8 can teach · 0 practice attempts</strong><small>Eight lessons are published. Mastery is what you can explain without looking.</small></div>
+<div class="mastery-progress" aria-hidden="true"><span id="masteryBar" style="width:0%">0/8</span></div>
 <button type="button" class="primary" id="startPractice">Practice now</button>
 </div>
 <p class="persistence-notice" id="persistenceNotice" role="status" hidden>Browser storage is unavailable. Practice will still work, but changes last only for this tab.</p>
@@ -114,8 +114,8 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 <main id="learn-view" class="view" role="tabpanel" aria-labelledby="learn-tab">
 
 <div class="toc">
-<h2>The 7-Concept Curriculum</h2>
-<div class="progress-wrap"><div class="progress-bar" style="width:100%">7/7 lessons published</div></div>
+<h2>The 8-Concept Curriculum</h2>
+<div class="progress-wrap"><div class="progress-bar" style="width:100%">8/8 lessons published</div></div>
 <ol>
 <li><a href="#c1">Surplus Value</a> — where profit comes from</li>
 <li><a href="#c2">Dialectical Materialism</a> — how change actually works</li>
@@ -124,8 +124,9 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 <li><a href="#c5">Primitive Accumulation</a> — the first capital was stolen</li>
 <li><a href="#c6">Labour Theory of Value</a> — what things are really worth</li>
 <li><a href="#c7">Imperialism</a> — why capitalism must expand</li>
+<li><a href="#c8">Historical Materialism</a> — how societies change</li>
 </ol>
-<p style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--muted);margin-top:0.5rem">One concept per two weeks. 14-week programme. Source texts listed in each concept.</p>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--muted);margin-top:0.5rem">One concept per two weeks. 16-week programme. Source texts listed in each concept.</p>
 </div>
 
 <article class="concept-card open" id="c1" data-concept-id="c1">
@@ -238,6 +239,22 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 <p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Source: Lenin, Imperialism: The Highest Stage of Capitalism (1916).</p>
 </div>
 </article>
+
+<article class="concept-card" id="c8" data-concept-id="c8">
+<div class="meta">Concept 8 · How societies change</div>
+<h2><button type="button" class="lesson-toggle" aria-expanded="false" aria-controls="c8-body">Historical Materialism <span>lesson</span></button></h2>
+<div class="concept-body" id="c8-body" hidden>
+<p>Why did feudalism give way to capitalism? Not because everybody finally heard a better argument. People were already living inside a changing way of producing food, goods and wealth.</p>
+<p>Every society combines <em>productive forces</em> — its labour, skills, tools, knowledge and organisation — with <em>relations of production</em> — who owns those forces, who works, who decides and who gets the product. Together they form a mode of production.</p>
+<div class="example">Under feudalism, land was the central productive force and peasants were bound into obligations to landlords. Trade, towns and manufacture expanded inside that order. The old relations eventually constrained the new productive powers, but no machine automatically ended feudalism: classes fought over the order that would replace it.</div>
+<h3>Contradiction creates a struggle, not a timetable</h3>
+<p>When the way people can produce comes into conflict with the ownership and class relations organising production, those relations become a brake. The conflict opens a period of struggle. Its outcome depends on organised people, power and the conditions they inherit; history has no automatic conveyor belt to socialism.</p>
+<div class="example">Cloud computing and AI could shorten necessary work and spread useful knowledge. Under private ownership, the same capacity can intensify work, monitor workers and concentrate wealth. Technology creates possibilities. Social relations decide who controls them and who benefits.</div>
+<p>That is why Marx wrote that people make their own history, but not in circumstances of their own choosing. Historical materialism neither erases human agency nor treats ideas as magic. It asks what material conflict people are acting inside, which classes have the power to act, and what inherited limits they must overcome.</p>
+<div class="summary"><p><strong>In one sentence:</strong> Societies change when the way people produce life collides with who owns and controls production, creating class struggles in which people remake conditions they inherited.</p></div>
+<p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--muted)">Sources: Marx, Preface to A Contribution to the Critique of Political Economy; Marx and Engels, The German Ideology, Part I; Marx, The Eighteenth Brumaire of Louis Bonaparte, Chapter 1.</p>
+</div>
+</article>
 </main>
 
 <section id="practice-view" class="view" role="tabpanel" aria-labelledby="practice-tab" hidden>
@@ -278,7 +295,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 </section>
 
 <section id="plan-view" class="view" role="tabpanel" aria-labelledby="plan-tab" hidden>
-<h2>14-week programme</h2>
+<h2>16-week programme</h2>
 <p class="plan-intro">One concept every two weeks: read the source, study the plain explanation, practise aloud, then earn “Can teach” without looking. The dates create accountability; they do not mark a lesson complete for you.</p>
 
 <div class="programme-controls">
@@ -295,7 +312,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid v
 </div>
 </section>
 
-<p class="disclaimer">Part of the Marxist mastery goal — plain-language explanations and self-assessed recall, not academic certification. Seven lessons being published is not the same as understanding them. Practice ratings and programme dates stay only in this browser. Drafts remain open for revision based on Anthony's feedback.</p>
+<p class="disclaimer">Part of the Marxist mastery goal — plain-language explanations and self-assessed recall, not academic certification. Eight lessons being published is not the same as understanding them. Practice ratings and programme dates stay only in this browser. Drafts remain open for revision based on Anthony's feedback.</p>
 
 <script type="module" src="./app.js"></script>
 </body>

@@ -89,7 +89,7 @@ function renderMastery() {
   const percentage = (summary.mastered / summary.total) * 100;
   document.getElementById('masteryBar').style.width = `${percentage}%`;
   document.getElementById('masteryBar').textContent = `${summary.mastered}/${summary.total}`;
-  document.getElementById('masteryText').textContent = `${summary.mastered}/7 can teach · ${summary.attempts} practice attempt${summary.attempts === 1 ? '' : 's'}`;
+  document.getElementById('masteryText').textContent = `${summary.mastered}/${summary.total} can teach · ${summary.attempts} practice attempt${summary.attempts === 1 ? '' : 's'}`;
 }
 
 function renderPersistenceNotice() {
@@ -100,7 +100,7 @@ function renderPracticeMeta() {
   if (!currentConceptId) return;
   const concept = CONCEPTS.find(item => item.id === currentConceptId);
   const entry = state.progress[currentConceptId];
-  document.getElementById('practiceMeta').textContent = `Concept ${concept.number} of 7 · ${RATING_LABELS[entry.rating]}`;
+  document.getElementById('practiceMeta').textContent = `Concept ${concept.number} of ${CONCEPTS.length} · ${RATING_LABELS[entry.rating]}`;
 }
 
 function setPracticeConcept(conceptId) {

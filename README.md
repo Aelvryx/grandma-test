@@ -1,6 +1,6 @@
 # The Grandma Test
 
-Seven core Marxist concepts in plain English, plus an active-recall practice loop and a 14-week route from reading to teaching.
+Eight core Marxist concepts in plain English, plus an active-recall practice loop and a 16-week route from reading to teaching.
 
 The application is completely client-side. Practice ratings, attempts and programme dates stay in local browser storage and are not transmitted anywhere.
 
@@ -17,4 +17,4 @@ npm ci
 npm run check
 ```
 
-The tests lock the seven-concept practice contract, safe progress-state recovery, rating and selection behaviour, the complete 14-week schedule, and the HTML/model identity boundary.
+The tests lock the eight-concept practice contract, safe progress-state migration and recovery, rating and selection behaviour, the complete 16-week schedule, and the HTML/model identity boundary.
