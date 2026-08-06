@@ -97,6 +97,18 @@ export const CONCEPTS = Object.freeze([
     ],
     benchmark: 'Imperialism is the monopoly stage of capitalism in which finance capital must expand abroad, exporting capital and organising the world to transfer value from the periphery to the centre.',
   },
+  {
+    id: 'c8',
+    number: 8,
+    title: 'Historical Materialism',
+    prompt: 'Why did feudalism give way to capitalism without new technology automatically causing the change or better ideas simply winning the argument?',
+    criteria: [
+      'Productive forces and relations of production combine as a mode of production.',
+      'Their conflict creates class struggle and possibilities, not an automatic historical timetable.',
+      'People make history through organised action, but inside conditions inherited from the past.',
+    ],
+    benchmark: 'Historical materialism explains social change through conflicts between productive forces and relations of production, fought out by classes and organised people acting within inherited conditions.',
+  },
 ]);
 
 function validDate(value) {
